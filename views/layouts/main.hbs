@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KanbanPro</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f4f6f9; }
+    header { 
+      background: #2c3e50; 
+      color: white; 
+      padding: 1rem; 
+      text-align: center; 
+    }
+    nav a { 
+      color: white; 
+      margin: 0 15px; 
+      text-decoration: none; 
+      font-weight: 500;
+    }
+    .container { 
+      max-width: 1200px; 
+      margin: 30px auto; 
+      padding: 0 20px; 
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🚀 KanbanPro</h1>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/register">Registro</a>
+      <a href="/login">Iniciar Sesión</a>
+      <a href="/dashboard">Dashboard</a>
+      <a href="/db-status">Estado BD</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    {{{body}}}
+  </div>
+</body>
+</html>

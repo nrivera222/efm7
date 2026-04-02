@@ -1,0 +1,29 @@
+<h2>Dashboard - Proyecto KanbanPro</h2>
+
+<div style="display: flex; gap: 20px; flex-wrap: wrap;">
+  {{#each tableros}}
+    {{#each this.listas}}
+      <div style="background: white; padding: 20px; border-radius: 12px; width: 320px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <h4>{{this.titulo}}</h4>
+        
+        <!-- Formulario para nueva tarjeta -->
+        <form method="POST" action="/nueva-tarjeta" style="margin: 15px 0;">
+          <input type="hidden" name="listaId" value="{{this.id}}">
+          <input type="text" name="titulo" placeholder="Título de la tarea" required style="width:100%; padding:10px; margin-bottom:8px;">
+          <textarea name="descripcion" placeholder="Descripción (opcional)" style="width:100%; padding:10px; height:70px;"></textarea>
+          <button type="submit" style="width:100%; padding:12px; background:#27ae60; color:white; border:none; border-radius:6px; cursor:pointer;">
+            + Añadir tarjeta
+          </button>
+        </form>
+        
+        <!-- Tarjetas existentes -->
+        {{#each this.tarjetas}}
+          <div style="background:#f8f9fa; padding:12px; margin:8px 0; border-left:5px solid #3498db; border-radius:6px;">
+            <strong>{{this.titulo}}</strong>
+            <p style="margin:5px 0 0; font-size:0.9em; color:#555;">{{this.descripcion}}</p>
+          </div>
+        {{/each}}
+      </div>
+    {{/each}}
+  {{/each}}
+</div>

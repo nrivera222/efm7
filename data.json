@@ -1,0 +1,42 @@
+{
+  "tableros": [
+    {
+      "id": 1,
+      "nombre": "Proyecto KanbanPro",
+      "listas": [
+        {
+          "id": 1,
+          "titulo": "Por hacer",
+          "tarjetas": [
+            {
+              "id": 101,
+              "titulo": "Diseñar logo",
+              "descripcion": "Crear versión final del logo para la landing page"
+            },
+            {
+              "id": 102,
+              "titulo": "Configurar conexión a PostgreSQL",
+              "descripcion": "Completado en este sprint"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "titulo": "En progreso",
+          "tarjetas": [
+            {
+              "id": 201,
+              "titulo": "Implementar dashboard",
+              "descripcion": "En desarrollo"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "titulo": "Hecho",
+          "tarjetas": []
+        }
+      ]
+    }
+  ]
+}
